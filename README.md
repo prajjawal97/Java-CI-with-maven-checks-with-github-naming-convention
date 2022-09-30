@@ -1,0 +1,1 @@
+# Java-CI-with-maven-checks-with-github-naming-convention
