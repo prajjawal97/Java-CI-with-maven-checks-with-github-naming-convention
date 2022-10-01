@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 public class Test extends BaseClass {
 
     public WebDriver driver;
+    String Expectedresult = "nopCommerce demo store. Login";
 
     @BeforeClass
     public void setUp() {
@@ -27,7 +28,7 @@ public class Test extends BaseClass {
         driver.findElement(By.id("Password")).sendKeys("testcase.Test@123");
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
         Thread.sleep(3000);
-        Assert.assertEquals(driver.getTitle(), "nopCommerce demo store. Login");
+        Assert.assertEquals(driver.getTitle(), Expectedresult);
 
     }
 
@@ -39,7 +40,7 @@ public class Test extends BaseClass {
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
         Thread.sleep(3000);
 
-        Assert.assertEquals(driver.getTitle(), "nopCommerce demo store. Login");
+        Assert.assertEquals(driver.getTitle(), Expectedresult);
     }
 
     @AfterClass
