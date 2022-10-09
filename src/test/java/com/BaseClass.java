@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
 
     public WebDriver driver;
-    public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
+    public static ThreadLocal<WebDriver> testdriver = new ThreadLocal<WebDriver>();
 
     public WebDriver initialize_driver() {
 
@@ -20,9 +20,7 @@ public class BaseClass {
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1200");
         options.addArguments("--ignore-certificate-errors");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox","--disable-dev-shm-usage","--disable-extensions");
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
@@ -32,6 +30,6 @@ public class BaseClass {
     }
 
     public static synchronized WebDriver getDriver() {
-        return tdriver.get();
+        return testdriver.get();
     }
 }
