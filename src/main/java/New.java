@@ -6,9 +6,6 @@ public class New {
             int i = 100/0;
         } catch (Exception e) {
             e.printStackTrace();
-        } catch (ArithmeticException e1) {
-            e1.printStackTrace();
         }
-
     }
 }
