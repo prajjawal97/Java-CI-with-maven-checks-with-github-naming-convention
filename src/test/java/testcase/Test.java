@@ -25,9 +25,9 @@ public class Test extends BaseClass {
     {
         driver.findElement(By.linkText("Log in")).click();
         driver.findElement(By.id("Email")).sendKeys("prajjawalkansal@gmail.com");
-        driver.findElement(By.id("Password")).sendKeys("testcase.Test@123");
+        driver.findElement(By.id("Password")).sendKeys("testcase.Admin@123");
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getTitle(), Expectedresult);
 
     }
@@ -38,7 +38,7 @@ public class Test extends BaseClass {
         driver.findElement(By.id("Email")).sendKeys("avadhsharma566@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("prajjawal1234");
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         Assert.assertEquals(driver.getTitle(), Expectedresult);
     }
