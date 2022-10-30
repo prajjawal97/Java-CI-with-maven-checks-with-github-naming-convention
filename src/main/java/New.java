@@ -5,8 +5,8 @@ public class New {
         try {
             int i = 100/0;
             int j= 240/i;
-        } catch (Exception e) {
-            e.exception();
+        } catch (AirmathicException e) {
+            e.printStackTrace();
         }
     }
 }
